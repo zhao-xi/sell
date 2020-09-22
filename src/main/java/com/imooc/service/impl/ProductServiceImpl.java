@@ -23,7 +23,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<ProductInfo> findUpAll(Integer productStatus) {
+    public List<ProductInfo> findUpAll() {
         return repository.findByProductStatus(ProductStatus.UP.getStatus());
     }
 

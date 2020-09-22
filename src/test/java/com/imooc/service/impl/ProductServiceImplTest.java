@@ -29,7 +29,7 @@ public class ProductServiceImplTest extends TestCase {
 
     @Test
     public void testFindUpAll() {
-        List<ProductInfo> result = productService.findUpAll(ProductStatus.UP.getStatus());
+        List<ProductInfo> result = productService.findUpAll();
         Assert.assertNotEquals(0, result.size());
     }
 

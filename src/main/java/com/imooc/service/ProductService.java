@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ProductService {
     ProductInfo findOne(String productId);
-    List<ProductInfo> findUpAll(Integer productStatus);
+    List<ProductInfo> findUpAll();
     Page<ProductInfo> findAll(Pageable pageable);
     ProductInfo save(ProductInfo productInfo);
 }
