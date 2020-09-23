@@ -1,7 +1,7 @@
 package com.imooc.service.impl;
 
 import com.imooc.dataobject.ProductInfo;
-import com.imooc.enums.ProductStatus;
+import com.imooc.enums.ProductStatusEnum;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
@@ -48,7 +48,7 @@ public class ProductServiceImplTest extends TestCase {
         productInfo.setProductStock(100);
         productInfo.setProductDescription("很好吃的虾");
         productInfo.setProductIcon("http://xxx.jpg");
-        productInfo.setProductStatus(ProductStatus.DOWN.getStatus());
+        productInfo.setProductStatus(ProductStatusEnum.DOWN.getStatus());
         productInfo.setCategoryType(2);
 
         ProductInfo result = productService.save(productInfo);
