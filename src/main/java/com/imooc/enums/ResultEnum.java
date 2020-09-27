@@ -13,7 +13,8 @@ public enum ResultEnum {
     PRODUCT_STOCK_ERROR(11, "商品库存不正确"),
     ORDER_NOT_EXISIT(12, "订单不存在"),
     ORDERDETAIL_NOT_EXISIT(13, "订单详情不存在"),
-    ORDER_STATUS_ERROR(14, "订单状态不正确")
+    ORDER_STATUS_ERROR(14, "订单状态不正确"),
+    PAY_STATUS_ERROR(15,"支付状态不正确")
     ;
 
     private Integer code;

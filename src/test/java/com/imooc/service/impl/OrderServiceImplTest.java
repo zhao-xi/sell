@@ -1,8 +1,10 @@
 package com.imooc.service.impl;
 
 import com.imooc.dataobject.OrderDetail;
+import com.imooc.dataobject.OrderMaster;
 import com.imooc.dto.OrderDTO;
 import com.imooc.enums.OrderStatusEnum;
+import com.imooc.enums.PayStatusEnum;
 import com.imooc.service.OrderService;
 import junit.framework.TestCase;
 import lombok.extern.slf4j.Slf4j;
@@ -74,9 +76,15 @@ public class OrderServiceImplTest extends TestCase {
 
     @Test
     public void testFinish() {
+        OrderDTO orderDTO = orderService.findOne("1601104748974602246");
+        OrderDTO result = orderService.finish(orderDTO);
+        Assert.assertEquals(OrderStatusEnum.FINISHED.getCode(), result.getOrderStatus());
     }
 
     @Test
     public void testPaid() {
+        OrderDTO orderDTO = orderService.findOne("1601104748974602246");
+        orderService.paid(orderDTO);
+        Assert.assertEquals(PayStatusEnum.SUCCESS.getCode(), orderDTO.getPayStatus());
     }
 }
