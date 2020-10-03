@@ -3,6 +3,7 @@ package com.imooc.VO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+
 @Data
 public class ResultVO<T> {
     @JsonProperty("code")

@@ -1,4 +1,4 @@
-package com.imooc;
+package com.imooc.controller;
 
 import com.imooc.VO.ProductInfoVO;
 import com.imooc.VO.ProductVO;
